@@ -18,14 +18,14 @@ Test update open source file to cocoapods.
 
 ##### 1 代码上传Github
 首先我们打开[github.com](https://github.com/)，然后创建自己的项目工程：
-![图一](http://upload-images.jianshu.io/upload_images/2115041-b810fae200c34e87.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![图一](http://oqepgj2jp.bkt.clouddn.com/cocoapods1.png)
 
 
 这里注意那个`MIT License`，在后面添加`Cocoapods`支持的时候会用到（稍后介绍）。然后点击创建即可。
 然后用`SouceTree`将代码`down`到本地，将自己的项目放到里面，文件夹如图所示：
 
 
-![图二.png](http://upload-images.jianshu.io/upload_images/2115041-a4fed0a898c9e253.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![图二.png](http://oqepgj2jp.bkt.clouddn.com/cocoapods2.png)
 
 这里的`LICENSE`就是刚才说的`MIT License`添加的文件。`SJRSAEncryptorDemo`是示例工程，`SJRSAEncryptor`就是提供给他人使用的库。然后提交到`Github`就可以了。
 
@@ -39,7 +39,7 @@ pod spec create SJRSAEncryptor   // SJRSAEncryptor改为你的上传库文件名
 
 如图：
 
-![图三.png](http://upload-images.jianshu.io/upload_images/2115041-178816910884e0cb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![图三.png](http://oqepgj2jp.bkt.clouddn.com/cocoapods3.png)
 
 编辑`podspec`文件(最好用代码编辑器打开进行编辑)：
 
@@ -72,7 +72,7 @@ pod lib lint SJRSAEncryptor.podspec   // SJRSAEncryptor改为你的上传库文�
 ```
 如图：
 
-![图四.png](http://upload-images.jianshu.io/upload_images/2115041-be91d4f955e7352d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![图四.png](http://oqepgj2jp.bkt.clouddn.com/cocoapods4.png)
 
 
 结果多种多样，如果有错，则按照提示进行改错即可。
@@ -85,7 +85,7 @@ pod lib lint SJRSAEncryptor.podspec --allow-warnings   // SJRSAEncryptor改为�
 如图：
 
 
-![图五.png](http://upload-images.jianshu.io/upload_images/2115041-1e70591d46e72270.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![图五.png](http://oqepgj2jp.bkt.clouddn.com/cocoapods5.png)
 
 当看到`SJRSAEncryptor passed validation.`之后，就说明验证通过了。
 
@@ -93,12 +93,12 @@ pod lib lint SJRSAEncryptor.podspec --allow-warnings   // SJRSAEncryptor改为�
 打开项目的目录，然后创建`release`版本的类库：
 
 
-![图六.png](http://upload-images.jianshu.io/upload_images/2115041-3ff33308a2664cff.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![图六.png](http://oqepgj2jp.bkt.clouddn.com/cocoapods6.png)
 
 点击`release`,添加发布版本（我这已经发步过一次，所以显示1）。
 
 
-![图七.png](http://upload-images.jianshu.io/upload_images/2115041-6ddfad3afb05d11c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![图七.png](http://oqepgj2jp.bkt.clouddn.com/cocoapods7.png)
 
 ##### 4 注册CocoaPods账号
 执行命令行：
@@ -110,7 +110,7 @@ pod trunk register 邮箱地址  '用户名' --description='描述信息'
 
 发送了一个验证码到邮箱，你可以打开你的邮箱验证即可。打开邮件中的链接后如下：
 
-![图八.png](http://upload-images.jianshu.io/upload_images/2115041-15f20823fa4dfd3c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![图八.png](http://oqepgj2jp.bkt.clouddn.com/cocoapods8.png)
 
 这样就成功注册了Cocoapods账号。
 可以用
@@ -119,7 +119,7 @@ pod trunk me
 ```
 检查是否创建成功。成功的结果如下：
 
-![图九.png](http://upload-images.jianshu.io/upload_images/2115041-ad48ecab1590dea9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![图九.png](http://oqepgj2jp.bkt.clouddn.com/cocoapods9.png)
 
 
 然后执行：
@@ -131,7 +131,7 @@ pod trunk push SJRSAEncryptor.podspec --allow-warnings   // SJRSAEncryptor改为
 执行结果如下：
 
 
-![图十.png](http://upload-images.jianshu.io/upload_images/2115041-14b5c967d4abc892.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![图十.png](http://oqepgj2jp.bkt.clouddn.com/cocoapods10.png)
 
 
 说明了已经上传成功。
