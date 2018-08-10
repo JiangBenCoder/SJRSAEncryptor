@@ -140,7 +140,7 @@ pod trunk push SJRSAEncryptor.podspec --allow-warnings   // SJRSAEncryptor改为
 ##### 6 检查上传是否成功
 
 ```
-pod search ZGRSAEncryptor
+pod search SJRSAEncryptor
 ```
 
 
